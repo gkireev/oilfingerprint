@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import numpy as np
-from data_preprocessing import preprocessing
+from models.data_preprocessing import preprocessing
 import matplotlib.pyplot as plt
 from scipy.stats import f_oneway
 import seaborn as sns
@@ -9,7 +9,7 @@ import seaborn as sns
 path_to_data = os.path.join(os.getcwd(), "biomarker_dataset.xlsx")
 data = pd.read_excel(path_to_data)
 
-X, y, freq = preprocessing(data)
+X, y, freq = preprocessing(data, dist=True)
 
 # Oil group distribution
 fig_1, ax_1 = plt.subplots()

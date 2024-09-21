@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import numpy as np
-from data_preprocessing import preprocessing
+from models.data_preprocessing import preprocessing
 from sklearn.manifold import TSNE
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
