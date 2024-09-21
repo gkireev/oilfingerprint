@@ -1,6 +1,6 @@
 import pandas as pd
 
-def preprocessing (data):
+def preprocessing (data, dist=False):
 
     # removing insignificant data
     percent = 0.05
@@ -25,4 +25,7 @@ def preprocessing (data):
     data = pd.get_dummies(data)
     X, y = data.values, data_pred.values
 
-    return X, y
+    if dist:
+        return X, y, signif
+    else:
+        return X, y
